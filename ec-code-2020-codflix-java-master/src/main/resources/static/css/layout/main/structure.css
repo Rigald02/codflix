@@ -40,11 +40,13 @@
 **********/
 
 .wrapper {
-  width: 100%;
+  width: 100%
   min-height: 100vh;
 }
 
 #content {
     position: relative;
     flex-basis: 100%;
+    width: 100%;
+    padding-bottom: 5%;
 }

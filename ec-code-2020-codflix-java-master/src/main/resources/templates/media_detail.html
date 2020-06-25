@@ -1,9 +1,14 @@
 #parse("dashboard.html")
 #@mainLayout()
-Medias
 
-<h1>Media Detail</h1>
-<div>$media.getTitle()</div>
-<div>$media.getSummary()</div>
-
+<div class="media-detail">
+    <h1>$media.getTitle()</h1>
+        <div class="video2">
+            <div>
+                <iframe allowfullscreen="" frameborder="0"
+                        src="$media.getTrailerUrl()" ></iframe>
+            </div>
+        </div>
+    <div>$media.getSummary()</div>
+</div>
 #end
