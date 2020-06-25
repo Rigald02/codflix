@@ -48,7 +48,7 @@ public class MediaDao {
         return medias;
     }
     public Media filterGenre(int genre_id) {
-        Media media = null;
+        Media genre = null;
 
         Connection connection = Database.get().getConnection();
         try {
@@ -58,13 +58,13 @@ public class MediaDao {
 
             ResultSet rs = st.executeQuery();
             if (rs.next()) {
-                media = mapToMedia(rs);
+                genre = mapToMedia(rs);
             }
         } catch (SQLException | ParseException e) {
             e.printStackTrace();
         }
 
-        return media;
+        return genre;
     }
 
     public Media getMediaById(int id) {

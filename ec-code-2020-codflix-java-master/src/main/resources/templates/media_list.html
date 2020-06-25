@@ -19,7 +19,7 @@
         <a class="item" href="/medias/$media.getId()">
             <div class="video">
                 <div>
-                    <iframe allowfullscreen="" frameborder="0"
+                    <iframe id = "videoplay" allowfullscreen="" frameborder="0"
                             src="$media.getTrailerUrl()" ></iframe>
                 </div>
             </div>
@@ -27,7 +27,19 @@
                 $media.getTitle()
             </div>
             <div class="sums">
-                <div>$media.getGenreId()</div>
+                <body id = "littleresume">
+                <!-- Script to take up the lenghth of the video downloaded from the BDD. In theory.-->
+                    <script type="text/javascript">
+                        var myVideoPlayer = document.getElementById('videoplay'),
+                            meta = document.getElementbyId('littleresume');
+                        myVideoPlayer.addEventListener('loadedmetadata', function(){
+                            var duration = myVideoPlayer.duration;
+
+                            meta.innerHTML = duration.toFixed(2)
+                        });
+                    </script>
+                    $media.getGenreId()
+                </body>
             </div>
         </a>
     #end
