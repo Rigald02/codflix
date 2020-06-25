@@ -21,3 +21,5 @@ public class GenreController {
         return Template.render("genre_list.html", model);
     }
 }
+
+

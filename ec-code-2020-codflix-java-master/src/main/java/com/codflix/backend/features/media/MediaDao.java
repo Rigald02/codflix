@@ -29,23 +29,6 @@ public class MediaDao {
         return medias;
     }
 
-    //selection of the summary to add it later in the media.
-    public List<Media> resumeMedia(String summary){
-        List<Media> sums = new ArrayList<>();
-
-        Connection connection = Database.get().getConnection();
-        try {
-            PreparedStatement st = connection.prepareStatement("SELECT * FROM media WHERE summary=? ORDER BY release_date DESC");
-            st.setString(1, summary);
-            ResultSet rs = st.executeQuery();
-            while (rs.next()) {
-                sums.add(mapToMedia(rs));
-            }
-        } catch (SQLException | ParseException e) {
-            e.printStackTrace();
-        }
-        return sums;
-    }
 
     public List<Media> filterMedias(String title) {
         List<Media> medias = new ArrayList<>();
@@ -63,6 +46,25 @@ public class MediaDao {
         }
 
         return medias;
+    }
+    public Media filterGenre(int genre_id) {
+        Media media = null;
+
+        Connection connection = Database.get().getConnection();
+        try {
+            PreparedStatement st = connection.prepareStatement("SELECT * FROM media WHERE genre_id=? ORDER BY release_date DESC");
+
+            st.setInt(2, genre_id);
+
+            ResultSet rs = st.executeQuery();
+            if (rs.next()) {
+                media = mapToMedia(rs);
+            }
+        } catch (SQLException | ParseException e) {
+            e.printStackTrace();
+        }
+
+        return media;
     }
 
     public Media getMediaById(int id) {

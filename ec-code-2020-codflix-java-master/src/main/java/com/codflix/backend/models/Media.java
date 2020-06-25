@@ -53,6 +53,7 @@ public class Media {
         this.genreId = genreId;
     }
 
+
     public String getTitle() { return title; }
 
     public void setTitle(String title) {

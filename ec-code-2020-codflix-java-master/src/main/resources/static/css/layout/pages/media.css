@@ -46,6 +46,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
+    text-align: center;
 
     padding: 5px 10px;
 
@@ -96,16 +97,3 @@
         flex-basis: 100%;
     }
 }
-/*   <iframe width="560" height="315" src="https://www.youtube.com/embed/J2fkQCy41E4" frameborder="0"
-             allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-             allowfullscreen></iframe>
-   <iframe src="//vidstreaming.io/streaming.php?id=NTQ4OTM"
-             allowfullscreen="true" frameborder="0" marginwidth="0"
-             marginheight="0" scrolling="no"></iframe>
-<iframe width="560" height="315" src="https://www.youtube.com/embed/t_oGuA-_NoI" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen></iframe>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/hVqUi8eNibs" frameborder="0"
-        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-*/

@@ -26,6 +26,7 @@ public class HistoryController {
         if (userIdStr == null || userIdStr.isEmpty()) {
             Spark.halt(401, "No user is provided to see history");
         }
+
         int userId = Integer.parseInt(userIdStr);
 
         User user = userDao.getUserById(userId);

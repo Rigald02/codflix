@@ -1,6 +1,7 @@
 /***** Sidebar menu *****/
 
 #sidebar {
+  min-height: 100vh;
   min-width: 250px;
   max-width: 250px;
   background: #1f1f1f;
@@ -9,7 +10,6 @@
   -o-transition: all 0.3s;
   transition: all 0.3s;
   position: relative;
-
   flex-basis: 250px;
 }
 #sidebar .sidebar-content {
@@ -76,7 +76,7 @@
 @media screen and (max-width: 768px) {
 
   #sidebar {
-    position: fixed;
+    position: relative;
     height: 100%;
     z-index: 9;
   }
@@ -120,10 +120,12 @@
   justify-content: space-between;
 }
 #content .header .title {
+
   font-weight: 700;
   color: #fff;
 }
 #content .header .title span {
+
   color: var(--color-red);
 }
 
